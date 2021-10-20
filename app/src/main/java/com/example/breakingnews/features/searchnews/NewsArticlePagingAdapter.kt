@@ -1,15 +1,17 @@
-package com.example.breakingnews.shared
+package com.example.breakingnews.features.searchnews
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.ListAdapter
+import androidx.paging.PagingDataAdapter
 import com.example.breakingnews.data.NewsArticle
 import com.example.breakingnews.databinding.ItemNewsArticleBinding
+import com.example.breakingnews.shared.NewsArticleComparator
+import com.example.breakingnews.shared.NewsArticleViewHolder
 
-class NewsArticleListAdapter(
+class NewsArticlePagingAdapter(
     private val onItemClick: (NewsArticle) -> Unit,
     private val onBookmarkClick: (NewsArticle) -> Unit
-) : ListAdapter<NewsArticle, NewsArticleViewHolder>(NewsArticleComparator()) {
+) : PagingDataAdapter<NewsArticle, NewsArticleViewHolder>(NewsArticleComparator()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsArticleViewHolder {
         val binding =

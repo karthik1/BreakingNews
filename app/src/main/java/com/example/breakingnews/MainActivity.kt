@@ -3,8 +3,8 @@ package com.example.breakingnews
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.codinginflow.mvvmnewsapp.features.bookmarks.BookmarksFragment
 import com.example.breakingnews.databinding.ActivityMainBinding
+import com.example.breakingnews.features.bookmarks.BookmarksFragment
 import com.example.breakingnews.features.breakingnews.BreakingNewsFragment
 import com.example.breakingnews.features.searchnews.SearchNewsFragment
 import dagger.hilt.android.AndroidEntryPoint
@@ -87,7 +87,6 @@ class MainActivity : AppCompatActivity() {
             selectFragment(fragment)
             true
         }
-
     }
 
     override fun onBackPressed() {
